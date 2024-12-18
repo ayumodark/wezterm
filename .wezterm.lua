@@ -3,7 +3,6 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.enable_tab_bar = false
-
 config.window_padding = {
 	left = "0px",
 	right = "0px",
@@ -25,6 +24,11 @@ config.keys = {
 		key = "h",
 		mods = "CTRL|ALT",
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "q",
+		mods = "CTRL|ALT",
+		action = wezterm.action.CloseCurrentPane({ confirm = true }),
 	},
 	{
 		key = "H",
