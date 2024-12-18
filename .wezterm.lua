@@ -15,4 +15,37 @@ config.font = wezterm.font("JetBrainsMono Nerd Font")
 
 config.color_scheme = "nord"
 
+config.keys = {
+	{
+		key = "v",
+		mods = "CTRL|ALT",
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "h",
+		mods = "CTRL|ALT",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "H",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.ActivatePaneDirection("Left"),
+	},
+	{
+		key = "L",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.ActivatePaneDirection("Right"),
+	},
+	{
+		key = "K",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.ActivatePaneDirection("Up"),
+	},
+	{
+		key = "J",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.ActivatePaneDirection("Down"),
+	},
+}
+
 return config
